@@ -21,4 +21,9 @@ Run the development server:
 npm run dev
 ```
 
-Visit http://localhost:3000 to see the app.
+Visit the provided local link to see the app.
+e.g.
+
+```
+Local:   http://127.0.0.1:5173/
+```
