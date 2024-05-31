@@ -9,23 +9,16 @@ tbc
 
 Clone the repository and install dependencies:
 
-````bash
+```bash
 git clone https://github.com/tamas6/react-app.git
 cd react-app
 npm install
-```s
+```
 
 Run the development server:
 
-````
-
+```
 npm run dev
-
 ```
 
 Visit http://localhost:3000 to see the app.
-
-
-## License
-This project is licensed under the MIT License.
-```
