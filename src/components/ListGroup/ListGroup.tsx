@@ -1,12 +1,13 @@
 import { MouseEvent, useState } from "react";
+import styles from "./ListGroup.module.css";
 
 interface Props {
 	items: string[];
 	heading: string;
-	OnSelectItem: (item: string) => void;
+	onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading, OnSelectItem }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
 	// HOOK
 
 	const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -24,7 +25,7 @@ function ListGroup({ items, heading, OnSelectItem }: Props) {
 		<>
 			<h1>{heading}</h1>
 			{items.length === 0 && <p>No item found</p>}
-			<ul className="list-group">
+			<ul className={[styles.listGroup, styles.container].join(" ")}>
 				{items.map((item, index) => (
 					<li
 						className={
@@ -35,7 +36,7 @@ function ListGroup({ items, heading, OnSelectItem }: Props) {
 						key={item}
 						onClick={() => {
 							setSelectedIndex(index);
-							OnSelectItem(item);
+							onSelectItem(item);
 						}}
 					>
 						{item}
