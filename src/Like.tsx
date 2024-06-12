@@ -1,3 +1,4 @@
+/*
 import React, { useState } from "react";
 import { BsHeartFill } from "react-icons/bs";
 import { BsHeart } from "react-icons/bs";
@@ -20,3 +21,4 @@ const Like = ({ onClick }: props) => {
 };
 
 export default Like;
+*/
