@@ -1,3 +1,17 @@
+import React from "react";
+import Form from "./components/Form";
+
+export const App = () => {
+	return (
+		<div>
+			<Form />
+		</div>
+	);
+};
+export default App;
+/*
+
+
 import ExpandableText from "./components/ExpandableText";
 
 export const App = () => {
@@ -27,7 +41,7 @@ export const App = () => {
 
 export default App;
 
-/*
+
 import React, { useState } from "react";
 // import produce from "immer";
 
