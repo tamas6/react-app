@@ -1,12 +1,15 @@
 import React, { FormEvent, useState } from "react";
 import { useForm, useFormState } from "react-hook-form";
+import ButtonCustomExample from "./DropdownButton";
 
 ///  Controlled Components l51
 
 interface FormData {
 	name: string;
 	age: number;
+	category: string;
 }
+
 const Form = () => {
 	const {
 		register,
@@ -35,10 +38,11 @@ const Form = () => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<div className="mb-3">
+			<div className="mb-4">
 				<label htmlFor="name" className="form-label">
-					Name
+					Description
 				</label>
+
 				<input
 					{...register("name", { required: true, minLength: 3, maxLength: 6 })}
 					id="name"
@@ -52,9 +56,9 @@ const Form = () => {
 					<p className="text-danger">The name must be at least 3 characters</p>
 				)}
 			</div>
-			<div className="mb-3">
+			<div className="mx-auto">
 				<label htmlFor="age" className="form-label">
-					Age
+					Amount
 				</label>
 				<input
 					{...register("age")}
@@ -66,6 +70,15 @@ const Form = () => {
 			<button className="btn btn-primary" type="submit">
 				Submit
 			</button>
+
+			<div className="dropdown">
+				<select>
+					<option value="0" />
+					<option value="1">Groceries</option>
+					<option value="2">Utilities</option>
+					<option value="2">Entertainment</option>
+				</select>
+			</div>
 		</form>
 	);
 };
